@@ -3,9 +3,9 @@ letters = input("Ingresa 3 letras separadas por espacio: ").split(" ")
 textRevers = " ".join(text.split(" ")[::-1])
 
 print(f"""El numero de letras que escogio apareciendo en su texto son los siguientes:
-{letters[0]}: {text.count(letters[0])}
-{letters[1]}: {text.count(letters[1])}
-{letters[2]}: {text.count(letters[2])}
+{letters[0]}: {text.lower().count(letters[0].lower())}
+{letters[1]}: {text.lower().count(letters[1].lower())}
+{letters[2]}: {text.lower().count(letters[2].lower())}
 
 El numero de paralabras en su texto es de: {len(text.split(" "))} 
 
