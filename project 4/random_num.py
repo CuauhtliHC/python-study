@@ -11,16 +11,14 @@ attempts = 8
 while attempts >= 0:
     if attempts > 0:
         choiceNum = input()
+        attempts -= 1
         if int(choiceNum) < 1 or int(choiceNum) > 100:
             print("Ha elegido un número que no está permitido")
         elif int(choiceNum) < numRandom:
-            attempts -= 1
             print(f"Ha elegido un número menor al número secreto, le quedan {attempts} intentos")   
         elif int(choiceNum) > numRandom:
-            attempts -= 1
             print(f"Ha elegido un número mayor al número secreto, le quedan {attempts} intentos")
-        elif int(choiceNum) == numRandom:
-            attempts -= 1
+        else:
             print(f"Ha eligido el numero secreto, le tomo {8 - attempts}")
             break
     elif attempts == 0:
